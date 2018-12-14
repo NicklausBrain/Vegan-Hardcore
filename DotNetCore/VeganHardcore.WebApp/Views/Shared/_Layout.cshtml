@@ -1,0 +1,73 @@
+﻿<!-- saved from url=(0022)http://localhost:3000/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Vegan hardcore</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/site.css">
+    <script src="/js/jquery-3.3.1.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/jquery.validate.js"></script>
+    <script src="/js/jquery.validate.unobtrusive.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="hardcore-app">
+
+        <div>
+            <header>
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                    <a class="navbar-brand" href="@Url.Action("Index", "Menu")">#НИКОГО НЕ ЕМ</a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="navbarCollapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Поварёнок Костя
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Index", "Feedback")">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link dropdown-toggle text-uppercase" data-toggle="dropdown" href="#">
+                                    Корзина &nbsp;<i class="fas fa-shopping-cart"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right p-0 m-0 ">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="col-md-12">КОРЗИНА ПУСТА</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header><main role="main">
+                <div class="container">
+                    @RenderBody()
+                </div>
+            </main><footer class="text-center">
+                <p>© 2018 НИКОГО НЕ ЕМ</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

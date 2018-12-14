@@ -1,0 +1,32 @@
+﻿@model IEnumerable<VeganHardcore.WebApp.Models.Meal>
+
+<div class="row">
+    <div class="card-columns ">
+        @foreach (var meal in Model)
+        {
+            <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="img/@meal.Image" style="max-width: 480px; max-height: 320px;">
+                <div class="card-body ">
+                    <h5 class="card-title m-0 text-uppercase">
+                        <button class="btn btn-link collapsed p-0" data-toggle="collapse" data-target="#mealdescription0">
+                            @meal.Title
+                        </button>
+                    </h5>
+                    <div id="mealdescription0" class="collapse card-text" data-parent="#accordion">
+                        @meal.Description
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">
+                            @meal.Price
+                        </small>
+                        <button type="button" class="btn btn-primary">
+                            Беру
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
