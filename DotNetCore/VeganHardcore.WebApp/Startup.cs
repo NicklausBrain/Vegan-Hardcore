@@ -11,11 +11,19 @@ namespace VeganHardcore.WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddCors(o =>
+                o.AddPolicy(
+                    "*",
+                    p => p.AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowAnyOrigin()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseCors("*");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
