@@ -24,3 +24,13 @@ npm start
 ```
 3. Explore Asp.Net Core application (http://localhost:5000)
 4. Explore React application (http://localhost:3000)
+
+## React Hot Reaload instructions
+The following commit shows how to enamble hot realoding capabilities in any React project:
+https://github.com/NicklausBrain/Vegan-Hardcore/commit/6fb460db01d84b9bb4c2240d31de93f7c7f4c640
+It utilizes https://github.com/gaearon/react-hot-loader
+This component should be at first installed using:
+``` bash
+npm install react-hot-loader
+```
+Try it out!
