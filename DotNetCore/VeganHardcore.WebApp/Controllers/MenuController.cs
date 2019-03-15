@@ -57,5 +57,11 @@ namespace VeganHardcore.WebApp.Controllers
             var menu = JsonConvert.DeserializeObject<Meal[]>(JsonMenu);
             return this.View(menu);
         }
+
+        [HttpGet]
+        public string Json()
+        {
+            return JsonMenu;
+        }
     }
 }
